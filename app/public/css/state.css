@@ -1,0 +1,124 @@
+header span:nth-child(1) {
+    animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) both;
+}
+
+header span:nth-child(2) {
+    animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .2s both;
+}
+
+header span:nth-child(3) {
+    animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .4s both;
+}
+
+header span:hover {
+    text-shadow: 0.12em 0.12em 0 var(--color-blue);
+}
+
+header span:nth-child(2):hover {
+    text-shadow: 0.12em 0.12em 0 var(--color-gray);
+}
+
+nav ul li:hover {
+    transform: rotate(0deg);
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.animation section {
+    animation: letterRotation 2.5s;
+}
+
+section {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+}
+
+.wave {
+    animation: drift 5000ms infinite linear;
+}
+
+.wrapper span {
+    animation: squishing 1s ease-in-out infinite alternate;
+}
+
+h3:hover {
+    text-shadow: 0.1em 0em 2em var(--color-gray);
+    mix-blend-mode: difference;
+    transition: 2s;
+    opacity: 0.8;
+}
+
+.chicken:hover {
+    animation: chicken 1s steps(7);
+}
+
+.chicken-click:checked+.chicken-walk {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.chicken-speak:hover {
+    border: 0.5em solid var(--color-blue);
+    background: var(--color-gray);
+    border-top-left-radius: 100% 1.5em;
+    border-bottom-right-radius: 100% 1.5em;
+    transition: 2s;
+    color: var(--color-blue);
+}
+
+/*Mobile*/
+@media (max-width: 30em) {
+    nav ul li:hover {
+        transform: rotate(-20deg);
+    }
+
+    .animation .stir {
+        animation: stirMoving-small 2.5s;
+    }
+}
+
+/*Ipad*/
+@media (min-width: 30em) and (max-width: 49em) {
+    nav ul li:hover {
+        transform: rotate(0deg);
+    }
+
+    .animation .stir {
+        animation: stirMoving-medium 2.5s;
+    }
+}
+
+@media (min-width: 49em) {
+    .animation .stir {
+        animation: stirMoving-large 2.5s;
+    }
+
+    .animation .drip {
+        background-color: var(--color-gray);
+        position: absolute;
+        height: 2em;
+        width: 1.5em;
+        right: 12em;
+        border-radius: 0 50% 50% 50%;
+        top: 3em;
+        z-index: 11;
+        opacity: 0.5;
+        transform: rotate3d(0, 0, 1, 30deg) skewY(25deg);
+        animation: drop 2s;
+    }
+
+    .background{
+        background: var(--color-gray);
+        mix-blend-mode: hard-light;
+    }
+
+    .background nav ul li {
+        filter: drop-shadow(0 0 0.75em var(--color-blue));
+    }
+    .background .chicken-speak{
+        filter: drop-shadow(0 0 0.75em var(--color-blue));
+    }
+}

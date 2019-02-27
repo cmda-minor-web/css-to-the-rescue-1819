@@ -1,0 +1,178 @@
+@keyframes squishing {
+    10%, 40%, 80% {
+        transform: scale(1, .9);
+    }
+
+    0%, 30%, 60%, 100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-hover {
+    from {
+        text-shadow: 0em 0em 0em var(--color-gray);
+        mix-blend-mode: difference;
+    }
+
+    to {
+        text-shadow: 0.1em 0em 2em var(--color-gray);
+        mix-blend-mode: difference;
+    }
+}
+
+@keyframes chicken {
+    to {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes stirMoving-small {
+
+    0%, 100% {
+        transform: translate(2em, 2em);
+    }
+
+    50% {
+        transform: translate(-3.8em, 0);
+    }
+
+    80% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes drop {
+    0% {
+        transform: rotate3d(0, 0, 1, 31deg) skewY(25deg) translate3d(0, 0vh, 0);
+    }
+
+    50% {
+        transform: rotate3d(0, 0, 1, 31deg) skewY(0deg) translate3d(16vh, 20vh, 0);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 31deg) skewY(-10deg) translate3d(20vh, 40vh, 0);
+    }
+}
+
+@keyframes stirMoving-medium {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-20em, 0);
+    }
+
+    80% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes stirMoving-large {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-40em, 0);
+    }
+
+    80% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes letterRotation {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(-1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes chickenWalk {
+    to {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes chickenStroll {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(500%);
+    }
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flipper {
+    from {
+        transform: rotateX(90deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes fadeText {
+    0% {
+        opacity: 1;
+        animation-timing-function: ease-in;
+        height: 0px;
+    }
+
+    8% {
+        opacity: 0;
+        height: 60px;
+    }
+
+    19% {
+        opacity: 0;
+        height: 60px;
+    }
+
+    25% {
+        opacity: 0;
+        height: 60px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
