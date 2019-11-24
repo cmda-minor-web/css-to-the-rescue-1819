@@ -116,9 +116,6 @@ h3:hover {
     }
 
     .background nav ul li {
-        filter: drop-shadow(0 0 0.75em var(--color-blue));
-    }
-    .background .chicken-speak{
-        filter: drop-shadow(0 0 0.75em var(--color-blue));
+        
     }
 }

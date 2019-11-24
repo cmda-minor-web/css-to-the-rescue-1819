@@ -23,17 +23,3 @@ function clickButton(event) {
 window.onresize = function() {
     location.reload();
 }
-
-
-// Mouse moving
-const el = document.querySelector("html");
-
-el.addEventListener("mousemove", (e) => {
-    el.classList.add('background')
-
-    setTimeout(stop, 500);
-});
-
-function stop() {
-    el.classList.remove('background')
-}
